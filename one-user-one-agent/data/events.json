@@ -1,0 +1,7 @@
+[
+ {"event_id":"E001","viewer_id":"V1001","event_type":"signup","received_at":"2026-10-18T10:00:00Z","event_time":"2026-10-18T10:00:00Z"},
+ {"event_id":"E002","viewer_id":"V1001","event_type":"app_open","received_at":"2026-10-19T10:00:00Z","event_time":"2026-10-19T09:58:00Z"},
+ {"event_id":"E003","viewer_id":"V1002","event_type":"signup","received_at":"2026-10-17T09:00:00Z","event_time":"2026-10-17T09:00:00Z"},
+ {"event_id":"E004","viewer_id":"V1002","event_type":"app_open","received_at":"2026-10-19T11:00:00Z","event_time":"2026-10-16T12:00:00Z"},
+ {"event_id":"E005","viewer_id":"V1003","event_type":"purchase","received_at":"2026-10-19T10:59:00Z","event_time":"2026-10-19T10:59:00Z"}
+]

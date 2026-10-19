@@ -1,0 +1,6 @@
+[
+ {"trigger_id":"TR001","event_id":"TR001","viewer_id":"V1001","event_type":"app_open","received_at":"2026-10-19T10:00:01Z","event_age_s":2,"app_dialect":"d1","campaign_dialect":"d2"},
+ {"trigger_id":"TR002","event_id":"TR002","viewer_id":"V1002","event_type":"app_open","received_at":"2026-10-19T11:00:01Z","event_age_s":86400,"app_dialect":"d2","campaign_dialect":"d2"},
+ {"trigger_id":"TR003","event_id":"TR003","viewer_id":"V1003","event_type":"app_open","received_at":"2026-10-19T11:01:00Z","event_age_s":1,"app_dialect":"d3"},
+ {"trigger_id":"TR001","event_id":"TR001","viewer_id":"V1001","event_type":"app_open","received_at":"2026-10-19T10:00:01Z","event_age_s":2,"app_dialect":"d1"}
+]

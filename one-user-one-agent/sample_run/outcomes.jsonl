@@ -1,0 +1,2 @@
+{"decision_id": "D-1a490d6864", "viewer_id": "V1001", "goal_id": "first_full_episode_3d", "signal": "episode_completed", "status": "FAILED", "attributable": false, "evidence": [], "note": "Observed success is not causal attribution; randomized holdout is used for impact."}
+{"decision_id": "D-f40965dc09", "viewer_id": "V1002", "goal_id": "first_full_episode_3d", "signal": "episode_completed", "status": "FAILED", "attributable": false, "evidence": [], "note": "Observed success is not causal attribution; randomized holdout is used for impact."}

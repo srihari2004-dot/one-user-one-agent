@@ -1,0 +1,7 @@
+{
+  "trigger_count": 4,
+  "decision_count": 3,
+  "total_replay_ms": 2,
+  "max_decision_ms": 0,
+  "within_60_seconds": true
+}

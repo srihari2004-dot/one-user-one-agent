@@ -1,0 +1,5 @@
+[
+ {"viewer_id":"V1001","signup_at":"2026-10-18T10:00:00Z","subscription_status":"free_trial","preferred_dialect":"d1","snapshot_at":"2026-10-18T00:00:00Z"},
+ {"viewer_id":"V1002","signup_at":"2026-10-17T09:00:00Z","subscription_status":"free_trial","preferred_dialect":"d2","snapshot_at":"2026-10-18T00:00:00Z"},
+ {"viewer_id":"V1003","signup_at":"2026-10-15T09:00:00Z","subscription_status":"paid","preferred_dialect":"d3","snapshot_at":"2026-10-18T00:00:00Z"}
+]

@@ -1,0 +1,4 @@
+[
+ {"action":"HOME_PAGE","constraints":{"minimum_titles":3,"requires_consent":false}},
+ {"action":"PUSH","constraints":{"requires_consent":true,"quiet_hours":"22:00-08:00","max_per_viewer_per_day":1}}
+]

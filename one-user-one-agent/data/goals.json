@@ -1,0 +1,4 @@
+[
+ {"goal_id":"first_full_episode_3d","description":"Complete a first full episode within three days of sign-up","rule_version":"v1","success_signal":"episode_completed"},
+ {"goal_id":"first_paid_plan_7d","description":"Start a first paid plan within seven days of sign-up","rule_version":"v1","success_signal":"purchase"}
+]

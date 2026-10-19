@@ -1,0 +1,92 @@
+{
+  "viewer_id": "V1003",
+  "facts": {
+    "dialect": {
+      "value": "d3",
+      "source": "app_setting",
+      "observed_at": "2026-10-19T11:01:00Z",
+      "confidence": 0.95
+    },
+    "subscription_status": {
+      "value": "paid",
+      "source": "profile_snapshot",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "confidence": 0.7
+    },
+    "events": {
+      "value": [
+        {
+          "event_id": "E005",
+          "viewer_id": "V1003",
+          "event_type": "purchase",
+          "received_at": "2026-10-19T10:59:00Z",
+          "event_time": "2026-10-19T10:59:00Z"
+        }
+      ],
+      "source": "event_stream",
+      "observed_at": "2026-10-19T11:01:00Z",
+      "confidence": 0.9
+    }
+  },
+  "active_goal": null,
+  "decisions": [
+    {
+      "decision_id": "D-64a23169c2",
+      "viewer_id": "V1003",
+      "trigger": {
+        "event": "app_open",
+        "event_id": "TR003",
+        "received_at": "2026-10-19T11:01:00Z",
+        "event_age_s": 1
+      },
+      "goal": null,
+      "action": "NONE",
+      "dialect": {
+        "used": "d3",
+        "source": "app_setting",
+        "conflicts": []
+      },
+      "content": [],
+      "confidence": 0.55,
+      "confidence_reason": "No eligible measurable goal or insufficient evidence",
+      "evidence": [
+        {
+          "ref": "event:E005",
+          "source": "event_stream",
+          "freshness": "2026-10-19T10:59:00Z",
+          "event_type": "purchase"
+        }
+      ],
+      "assumptions": [
+        "Synthetic input timestamps are parseable; missing data is not interpreted as proof of eligibility"
+      ],
+      "conflicts": [],
+      "checks": {
+        "passed": [
+          "idempotency",
+          "goal_rule",
+          "dialect_resolution"
+        ],
+        "failed": []
+      },
+      "decided_in_ms": 0,
+      "status": "NO_ACTION",
+      "reason": "No eligible measurable goal or insufficient evidence"
+    }
+  ],
+  "actions": [
+    {
+      "decision_id": "D-64a23169c2",
+      "action": "NONE",
+      "content": [],
+      "at": "2026-10-19T11:01:00Z"
+    }
+  ],
+  "outcomes": [],
+  "messages_today": 0,
+  "last_message_date": null,
+  "learned": [],
+  "processed_trigger_ids": [
+    "TR003"
+  ]
+}

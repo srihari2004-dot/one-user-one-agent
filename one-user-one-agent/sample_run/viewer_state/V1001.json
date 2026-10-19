@@ -1,0 +1,175 @@
+{
+  "viewer_id": "V1001",
+  "facts": {
+    "dialect": {
+      "value": "d1",
+      "source": "app_setting",
+      "observed_at": "2026-10-19T10:00:01Z",
+      "confidence": 0.95
+    },
+    "subscription_status": {
+      "value": "free_trial",
+      "source": "profile_snapshot",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "confidence": 0.7
+    },
+    "events": {
+      "value": [
+        {
+          "event_id": "E001",
+          "viewer_id": "V1001",
+          "event_type": "signup",
+          "received_at": "2026-10-18T10:00:00Z",
+          "event_time": "2026-10-18T10:00:00Z"
+        },
+        {
+          "event_id": "E002",
+          "viewer_id": "V1001",
+          "event_type": "app_open",
+          "received_at": "2026-10-19T10:00:00Z",
+          "event_time": "2026-10-19T09:58:00Z"
+        }
+      ],
+      "source": "event_stream",
+      "observed_at": "2026-10-19T10:00:01Z",
+      "confidence": 0.9
+    }
+  },
+  "active_goal": {
+    "id": "first_full_episode_3d",
+    "deadline": "2026-10-21T10:00:00+00:00",
+    "success_signal": "episode_completed",
+    "rule_version": "v1"
+  },
+  "decisions": [
+    {
+      "decision_id": "D-1a490d6864",
+      "viewer_id": "V1001",
+      "trigger": {
+        "event": "app_open",
+        "event_id": "TR001",
+        "received_at": "2026-10-19T10:00:01Z",
+        "event_age_s": 2
+      },
+      "goal": {
+        "id": "first_full_episode_3d",
+        "deadline": "2026-10-21T10:00:00+00:00",
+        "success_signal": "episode_completed",
+        "rule_version": "v1"
+      },
+      "action": "HOME_PAGE",
+      "dialect": {
+        "used": "d1",
+        "source": "app_setting",
+        "conflicts": [
+          {
+            "fact": "dialect",
+            "chosen": "d1",
+            "chosen_source": "app_setting",
+            "conflicting_source": "campaign",
+            "conflicting_value": "d2"
+          }
+        ]
+      },
+      "content": [
+        "T0101",
+        "T0102",
+        "T0103"
+      ],
+      "confidence": 0.82,
+      "confidence_reason": "Goal eligibility is derived from event/profile rules; title dialect and availability are checked against catalogue",
+      "evidence": [
+        {
+          "ref": "event:E001",
+          "source": "event_stream",
+          "freshness": "2026-10-18T10:00:00Z",
+          "event_type": "signup"
+        },
+        {
+          "ref": "event:E002",
+          "source": "event_stream",
+          "freshness": "2026-10-19T10:00:00Z",
+          "event_type": "app_open"
+        },
+        {
+          "ref": "catalogue:T0101",
+          "source": "catalogue",
+          "freshness": "2026-10-18T00:00:00Z"
+        },
+        {
+          "ref": "catalogue:T0102",
+          "source": "catalogue",
+          "freshness": "unknown"
+        },
+        {
+          "ref": "catalogue:T0103",
+          "source": "catalogue",
+          "freshness": "unknown"
+        }
+      ],
+      "assumptions": [
+        "Synthetic input timestamps are parseable; missing data is not interpreted as proof of eligibility"
+      ],
+      "conflicts": [
+        {
+          "fact": "dialect",
+          "chosen": "d1",
+          "chosen_source": "app_setting",
+          "conflicting_source": "campaign",
+          "conflicting_value": "d2"
+        }
+      ],
+      "checks": {
+        "passed": [
+          "idempotency",
+          "goal_rule",
+          "dialect_resolution",
+          "goal_eligibility",
+          "content_dialect",
+          "content_availability",
+          "minimum_three_titles",
+          "provider_output_validated"
+        ],
+        "failed": []
+      },
+      "decided_in_ms": 0,
+      "status": "PUBLISHED",
+      "reason": "Eligible goal and at least three currently available titles in the resolved app dialect"
+    }
+  ],
+  "actions": [
+    {
+      "decision_id": "D-1a490d6864",
+      "action": "HOME_PAGE",
+      "content": [
+        "T0101",
+        "T0102",
+        "T0103"
+      ],
+      "at": "2026-10-19T10:00:01Z"
+    }
+  ],
+  "outcomes": [
+    {
+      "decision_id": "D-1a490d6864",
+      "viewer_id": "V1001",
+      "goal_id": "first_full_episode_3d",
+      "signal": "episode_completed",
+      "status": "FAILED",
+      "attributable": false,
+      "evidence": [],
+      "note": "Observed success is not causal attribution; randomized holdout is used for impact."
+    }
+  ],
+  "messages_today": 0,
+  "last_message_date": null,
+  "learned": [
+    {
+      "goal_id": "first_full_episode_3d",
+      "outcome": "FAILED"
+    }
+  ],
+  "processed_trigger_ids": [
+    "TR001"
+  ]
+}
